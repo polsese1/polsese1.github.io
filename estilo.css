@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #696969;
+    font-family: "Arial", sans-serif;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #FFFFFF;
+}
+
+header p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    flex-grow: 1;
+}
+
+nav ul a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+nav ul a:hover {
+    background-color: #000000;
+    font-weight: bold;
+}
+
+h1, h2 {
+    color: #2596be;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 22px;
+    border-bottom: 4px dashed #000000;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    border-bottom: 2px dashed #2596be;
+    margin-bottom: 15px;
+}
+
+main {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #2596be;
+    padding-left: 10px;
+    margin: 20px 0;
+}
+
+img {
+    width: 250px;
+    display: block;
+    margin: 0;
+}
+
+a {
+    color: green;
+    background-color: gray;
+    text-decoration: underline black;
+    padding: 3px;
+}
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #2596be;
+    color: white;
+    margin-top: 40px;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+footer nav ul a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer nav ul a:hover {
+    color: #FFFECB;
+    text-decoration: underline;
+}
