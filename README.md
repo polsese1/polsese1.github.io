@@ -1,78 +1,52 @@
-# polsese1.github.io
-
-Ejercicio de protocolos y otros scripts de la UF2 de Sistemas de Cyberseguridad
-
-## Primera Parte del Ejercicio
-
-Esto es un ejemplo de Markdown
-
-Y esto es otro parrafo
-
-###### Sexta cabecera
-
-Vamos a trabajar con **estilos de letra** para dar *enfasis* 
-
-Esto es una combinacion con mucho ***Enfasis***
-> Esto es una cita
->
-> Las lineas vacias han de tener el (>)
->
-Pero tambien...
->> Tambien hay citas dentro de citas
-
-## Listados
-
-### Sin orden
-
-- Un elemento
-- otro elemento
-- otro elemento mas
-
-### Listado ordenado
-
-1. Primero
-2. Segundo
-3. Tercero
-4. Cuarto
-
-Esto es JavaScript`console.log("hola")`
-
-Y esto es u bloque de codigo
-
-```css
-body{
-margin:0;
-}
-```
-
-## AVISOS Y NOTIFICACIONES
->[!NOTE]
->Esto es una nota
-
->[!TIP]
->Esto es un resultado
-
->[!WARNING]
-> Cuidado que algo puede salir mal
-
->[!IMPORTANT]
->Ojito no te dejes el **WHERE** en el delete **FROM**
-
->[!CAUTION]
->Si te equivocas te vas al peo
+# Formularios
 
 
-## ENLACES
-[Esto es un enlace](https://enti.cat)
+## 1. Campo de texto
 
-Mira que esto es un enlace: [Esto es un enlace](https://enti.cat)
+```html
+<p><label for="campo-nombre">Nombre: </label><input type="text" name="nombre" id="campo-nombre"/></p>
 
-## Imagenes
+Este es un campo de texto donde el usuario puede escribir su nombre.
 
-![imagen](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png)
 
-## Lista de Tareas
+## 2. Campo de contraseña
 
-- [ ] Agua
-- [ ] Pan
-- [x] Pollo 
+<p>Password: <input type="password" name="pass" /></p>
+
+El campo de tipo password se utiliza para capturar contraseñas. Los caracteres que el usuario escribe se muestran como asteriscos (*) o puntos.
+
+
+## 3. Campo de fecha
+
+<p>Date: <input type="date" name="nacimiento" /></p>
+
+El campo de tipo date permite al usuario seleccionar una fecha desde un calendario. En este caso, está destinado a capturar la fecha de nacimiento del usuario.
+
+## 4. Campo numérico
+
+<p>Edat: <input type="number" name="edad" value="18" min="1" max="120" /></p>
+
+En este ejemplo, se define un rango de valores posibles entre 1 y 120, que son los límites de edad válidos. También se establece un valor predeterminado de 18.
+
+## 5.Casilla de verificación 
+
+<p><input type="checkbox" name="subscribe" id="subscribe"/> 
+<label for="subscribe">Si no aceptas esta cajetilla de texto, te suscribes a mi mailing de por vida y se te cobraran 1000€ mensuales por la cara</label></p>
+
+Este tipo de campo se usa cuando se desea que el usuario acepte o no una condición (por ejemplo, términos y condiciones). El campo checkbox es útil para permitir múltiples selecciones, aunque en este caso es de marcar o desmarcar.
+
+## 6. Botón de envío
+
+<p><input type="submit" /></p>
+
+El campo de tipo submit es un botón que envía los datos del formulario.
+
+# Etiqueta MD
+
+Links automáticos:
+
+Estos son necesarios cuando lo que quieres es mostrar una URL completa, y no un enlace enmascarado bajo una palabra o frase como ocurre con los links en línea.
+
+Para generar links automáticos tan solo tendrás que rodearlos con los símbolos < >.
+
+<http://www.enti.cat>
