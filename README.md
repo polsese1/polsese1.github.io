@@ -8,7 +8,6 @@
 
 Este es un campo de texto donde el usuario puede escribir su nombre.
 
-
 ## 2. Campo de contraseña
 
 <p>Password: <input type="password" name="pass" /></p>
