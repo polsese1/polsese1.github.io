@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microjuego</title>
+	<link rel="stylesheet" href="estilo.css" />
+</head>
+	<script>
+let numero = Math.floor(Math.random()*100)+1;
+let contador = 0;
+let maxIntentos = 10;
+
+function compara_numero () {
+    let mi_numero_input = document.getElementById("campo-numero");
+    let mi_numero = mi_numero_input.value;
+    let resultado = document.getElementById("resultado");
+    let submit_input = document.getElementById("field-submit");
+    
+    mi_numero_input.classList.remove("input-error");
+    
+    if (mi_numero < 1 || mi_numero > 100) {
+        mi_numero_input.value = " ";
+    } else {
+        contador++;
+    }
+	
+    submit_input.value = "Adivina! (" + contador + ")";
+    
+    if (contador > maxIntentos) {
+        submit_input.disabled = true;
+        resultado.innerHTML = "<em class='error'><strong>¡Juego terminado!</strong> Se te acabaron los intentos.</em>";
+    }
+    
+    if (mi_numero > numero) {
+        resultado.innerHTML = "<em class='error'>El número es más pequeño que " + mi_numero + "</em>";
+        mi_numero_input.classList.add("input-error");
+    } else if (mi_numero < numero) {
+        resultado.innerHTML = "<em class='error'>El número a adivinar es más grande que " + mi_numero + "</em>";
+        mi_numero_input.classList.add("input-error");
+    } else {
+        resultado.innerHTML = "<em class='you-win'>¡Felicidades! Has adivinado, el número era " + mi_numero + "!</em>";
+        mi_numero_input.classList.remove("input-error");
+    }
+    
+    mi_numero_input.value = "";
+    mi_numero_input.focus();
+}
+	</script>
+	
+<body>
+		<header>	
+				<h1>Pol Sesé</h1>
+				
+				<nav class = "navegacion-web">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="Hobbies.html">Hobbies</a></li>
+						<li><a href="Contacto.html">Contacto</a></li>
+						<li><a href="microjuego.html">Microjuego</a></li>
+					</ul>
+				</nav>
+		</header>
+
+	<main>
+		<form>
+		<h2> Adivina el numero</h2>
+		<p> Adivina el numero aleatorio genereado entre el 1 y el 100</p>
+		<p id = "resultado"> Prueba suerte! </p>
+		
+		<p><label for="numero">Tu numero:</label><input type="number" name="numero" id="campo-numero" /></p>
+		<p><input type="button" id="field-submit" value="Adivina!" onClick="compara_numero();"> </p>
+		</form>
+	</main>
+
+    <footer>
+		<p>Pol Sesé</p>
+    </footer>
+
+</body>
+
+</html>
