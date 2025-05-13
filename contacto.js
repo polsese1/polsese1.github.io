@@ -101,39 +101,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 });
-
-
-/*function validar_numero(event){
-	event.preventDefault();
-	let nombre = document.getElementById("campo-nombre");
-    let password = document.getElementById("campo-contrasenya");
-    let date = document.getElementById("campo-date");
-    let edat = document.getElementById("campo-edat");
-		
-	if (nombre.value == "") { 
-        nombre.classList.add("field-error");
-    } 
-	else {
-        nombre.classList.remove("field-error");
-    }
-
-    if (password.value == "") {
-        password.classList.add("field-error");
-    } 
-	else {
-        password.classList.remove("field-error");
-    }
-
-    if (date.value == "") {
-        date.classList.add("field-error");
-    } 
-	else {
-        date.classList.remove("field-error");
-    }
-	if (edat.value == "") {
-        edat.classList.add("field-error");
-	} else {
-		edat.classList.remove("field-error");
-		}
-	}
-	document.getElementById("contact-form").addEventListener("submit", validar_numero);*/
